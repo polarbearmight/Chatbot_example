@@ -1,14 +1,15 @@
 import streamlit as st
 
+
 class Layout:
-    
+
     def show_header(self, types_files):
         """
         Displays the header of the app
         """
         st.markdown(
             f"""
-            <h1 style='text-align: center;'> Ask Robby about your {types_files} files ! 😁</h1>
+            <h1 style='text-align: center;'> Ask CSVGenius about your {types_files} files ! 🤖</h1>
             """,
             unsafe_allow_html=True,
         )
@@ -38,7 +39,7 @@ class Layout:
                 label_visibility="collapsed",
             )
             submit_button = st.form_submit_button(label="Send")
-            
+
             is_ready = submit_button and user_input
         return is_ready, user_input
-    
+
